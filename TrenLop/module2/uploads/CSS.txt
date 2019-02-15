@@ -1,0 +1,144 @@
+﻿[1] CSS Transitions
+thiết lập thời gian thực hiện hiệu ứng cho phần tử
+
+transition: width 2s;
+-----------------------------------------------
+[2] JS hiệu ứng cuộn
+$(window).scroll(function() { 
+      if ($(this).scrollTop() > 50){
+            $('#top').addClass("content_fixed");
+      }
+      else{
+	      $('#top').removeClass("content_fixed");   
+}
+}); 
+-------------------------------------------
+[3] Hiệu ứng chạy chữ
+typing effect
+
+-----------------------------------------
+[4] hotline
+<?php 
+   $hotline=getRecord('tbl_support');
+   echo $hotline['dienthoai'] ;
+?>
+------------------------------------------
+[5] fixd navigation khi scroll
+.navbar-container{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: rgba(15, 32, 64, 0.7); //trong xuốt
+}
+-->kết hợp với hiệu ứng [2] nếu có baner phía trên thanh navbar
+------------------------------------------------------------------------------------------------
+CSS 3
+[1] border-radius: bo cạnh của phần tử
+border-radius: 15px;
+border-radius: 15px 50px 30px 5px;
+
+[2] border-image: tạo kiểu dáng cho đường viền bằng hình ảnh.
+border-image: url(image.png) 25 repeat;
+
+[3] background image
+#div1 {
+      background: url(img_flower.jpg);
+      background-size: 100px 80px;
+      background-repeat: no-repeat;
+}
+
+[4] Gradient Background: tạo độ dốc cho background 
+div{
+      background: linear-gradient(to right, red , yellow); //màu sắc bắt đầu từ màu red bên trái sau đó kéo sang phải(to-right) đến màu vàng.
+}
+
+[5] Color: độ mờ cho màu sắc với kênh màu rgba
+rgba(reg, green, blue, alpha) 
++ alpha: là độ mờ có giá trị từ 0->1 
+
+
+[6] shadow: tạo độ bóng 
+[6.1] box-shadow: tạo độ bóng cho phần tử
+box-shadow: 3px 2px; //đẩy bóng sang ngang 3px , dọc 2px
+box-shadow: 3px 2px grey; //thêm màu sắc cho bóng (mặc định là màu đen)
+box-shadow: 3px 2px 5px grey;//tham số thứ 3 là độ mờ của bóng
+
+https://www.ducanhplus.com/thuoc-tinh-box-shadow-trong-css3/
+
+[6.2] text-shadow: tạo độ bóng cho text.
+
+text-shadow: 3px 2px; // đẩy bóng sang ngang 3px , dọc 2px
+text-shadow: 2px 2px red; //thêm màu sắc cho bóng (mặc định là màu đen)
+text-shadow: 3px 2px 5px red; //tham số thứ 3 là độ mờ của bóng
+
+[7] cách khắc phục khi nội dung bị tràn
++ tự động xuống dòng khi nội dung quá dài
+word-wrap: break-word;
++ sử dụng overflow
+
+[8] Hiệu ứng 2D với transform
+transform: translate(50px, 100px); //di chuyển phần tử sang phải 50 pixel và xuống dưới 100 pixel.
+transform: rotate(20deg); //xoay phần tử theo chiều kim đồng hồ góc 20 độ.
+transform: scale(2, 3); //tăng phần tử gấp hai lần chiều rộng ban đầu và gấp ba lần chiều cao ban đầu.
+
+[9] Hiệu ứng 3D với transform 
+transform: rotateX(150deg); //quay quanh trục X với góc 150 độ.
+transform: rotateY(130deg); //quay quanh trục Y với góc 130 độ.
+transform: rotateZ(90deg); //quay quanh trục Y với góc 90 độ.
+
+[10] Transitions: hiệu ứng chuyển tiếp.
++ div{
+      transition: width 2s; //mất 2s để thực hiện thay đổi thuộc tính width khi hover
+}
+div:hover {
+      width: 300px;
+}
+
++ transition: width 2s, height 4s; //thay đổi cho nhiều thuộc tính
+
++ chỉ định tốc độ thực thi
+div {transition-timing-function: linear;} //tốc độ đều đều.
+div {transition-timing-function: ease;} //thực hiện hiệu ứng chuyển tiếp với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm (điều này là mặc định)
+div {transition-timing-function: ease-in;} //khởi đầu chậm
+div {transition-timing-function: ease-out;} // kết thúc chậm
+div {transition-timing-function: ease-in-out;} //khởi đầu và kết thúc chậm
+
++ Transition kết hợp Transform.
+div {
+      transition: width 2s, height 2s, transform 2s;
+}
+div:hover {
+      width: 300px;
+      height: 300px;
+      transform: rotate(180deg);
+}
+
+[11] ANIMATION.
+@keyframes example {
+      0%   {background-color: red;}    //0s
+      25%  {background-color: yellow;} //1s
+      50%  {background-color: blue;}   //2s
+      100% {background-color: green;}  //4s
+}
+//phần tử áp dụng hiệu ứng
+div {
+    animation-name: example; //tên hiệu ứng áp dụng
+    animation-duration: 4s; //thời gian thực hiện hiệu ứng đó.
+}
+
+//trì hoãn hiệu ứng
+div {
+      animation-name: example;
+      animation-duration: 4s;
+      animation-delay: 2s; //trì hoãn 2s trước khi thực hiện.
+}
+
+//thiết lập sự lặp lại hiệu ứng
+div {
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: 3; //lặp lại 3 lần (thay 3 bằng infinite để cho lặp lại mãi mãi).
+}
+
+
+

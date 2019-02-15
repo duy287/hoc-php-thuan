@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body{
+    background-color: rgb(243, 188, 105)
+}
+.content{
+    width: 1000px;
+    margin: auto
+}
+.sanpham{
+    width: calc(1000px / 3 - 20px);
+    float: left;
+    background-color: aliceblue;
+    margin: 10px
+}
+.hinhsp{
+    width: 40%;
+    float: left;
+}
+.thongtin{
+    width: 60%;
+    float: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.hinhsp img{
+    width: 100%;
+    margin: 49px 0
+}
+.thongtin li{
+    list-style-type: none;
+
+}
+.khuyenmai{
+    font-family: 'Pacifico', cursive;
+    color: red
+}
+.tensp, .giasp{
+    width: 100%;
+    clear: both;
+    font-size: 30px;
+    margin: 10px;
+    font-weight: bold
+}
+.giasp{
+    color: red;
+}
+
+.cart{
+    text-decoration: none;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    padding: 10px;
+    background-color: antiquewhite;
+
+}
+.cart img{
+    width: 50px;
+    margin-right: 10px;
+}
+.cart span{
+    font-size: 40px;
+    color: green;
+}
+.thongtin a{
+    padding: 8px;
+    background: antiquewhite;
+    border: 1px solid seagreen ;
+    border-radius: 5px;
+}
+
+/*------- style for cart.php ---------*/
+#products {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background: #fff;
+}
+
+#products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.img-product img{
+    width: 80px;
+}
+input[type="number"] {
+    width: 80px;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+
+input[type="button"]{
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+/*---------- RESPONSIVE ---------*/
+@media screen and (min-width:500px) and (max-width:928px){
+    .content{
+        width: 100%;
+        /* //500px  */
+    }
+    .sanpham{
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media screen and (max-width:499px){
+    .content{
+        width: 450px
+    }
+    .sanpham{
+        width: 430px;
+    }
+    .thongtin{
+        display: none
+    }
+}

@@ -1,0 +1,8 @@
+[1] Download thư việc PHPMailer
+https://github.com/PHPMailer/PHPMailer
+
+[2] Có 2 cách gửi mail trong PHP.
+- Cách 1: dùng chính phương thứ mail() trong PHP để gửi
+    Cách này phải cấu hình trong Server PHP khá nhiều
+- Cách 2: Dùng thư viện PHPMailer
+    Cánh này Phải trải qua các bước xác thực trên tài khoảng gmail.

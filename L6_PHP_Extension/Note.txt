@@ -1,0 +1,25 @@
+Một số các Extension Khác mà bạn cần quan tâm là:
+[1] Editor hỗ trợ soạn thảo text
+    CK Editor
+    tinyMCE
+
+[2] PHP Mailer
+    Hỗ trợ gửi mail tự động
+
+[3] Xử lý hình ảnh: cắt hình ảnh, resize (tạo ảnh thu nhỏ thumnail), xoay hình ảnh, đánh dấu bản quyền ảnh (watermark).
+    - ImageWorkshop
+    - Thumb
+
+[4] Cache
+    - Khái niệm: Cache là một công nghệ để lưu trữ tạm thời các tài liệu web như các trang HTML, hình ảnh,... 
+    để giảm tải băng thông và tăng tốc độ load trang.
+
+    - Cách thực hiện: ở lần truy cập đầu Cache sẽ
+    Lưu data xuông file nào đó trong máy người dùng --> sau đó ở truy cập lần sau, nó chỉ cần đọc file đó để hiển thị khi người dùng.
+    (thay vì phải truy vấn DB rồi trả về mã HTML như thông thường gây mất thời gian).
+
+    - Ứng dụng: Bộ nhớ cache được sử dụng để làm cho việc tải các trang web nhanh hơn.
+
+    - So sáng : session, cookie và cache
+    https://viblo.asia/p/cookie-cache-va-session-QpmleAOMlrd
+

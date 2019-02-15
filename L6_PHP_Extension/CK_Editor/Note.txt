@@ -1,0 +1,14 @@
+[1] Giới thiệu:
+- CKEditor là một trình soạn thảo văn bản HTML sử dụng cho việc tạo ra nội dung trên web. 
+Đó là một trình soạn thảo WYSIWYG mang lại các tính năng xử lý văn bản phổ biến trực tiếp đến trang web của bạn.
+- CKEditor là một ứng dụng mã nguồn mở, có nghĩa là bạn có thể sửa đổi nó theo bất kỳ cách nào bạn muốn.
+Lợi ích của nó đến từ một cộng đồng năng động không ngừng phát triển các ứng dụng với các add-ons miễn phí.
+-Tham khảo
+https://o7planning.org/vi/10369/huong-dan-su-dung-trinh-soan-thao-ckeditor
+
+[2] CK Finder
+Là một trình quản lý file được tích hợp vào CKEditor
+https://www.youtube.com/watch?v=SNmv_5CZ-GQ&list=PLv6GftO355As6fcadCeoePYH-diNX56Mj&index=1
+
+[3] Ngoài CKEditor thì cũng có một số trình soạn thảo WYSIWYG khác như tinyMCE
+https://appstechviet.wordpress.com/2014/05/07/wysiwyg-html-editor-tich-hop-trinh-bien-tap-chinh-sua-van-ban-trong-website/

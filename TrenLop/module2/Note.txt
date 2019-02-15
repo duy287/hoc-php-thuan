@@ -1,0 +1,108 @@
+
+Bài: function
+I/ Các hàm có sẵng
+1) Liên quan đến chuỗi
+- Tìm kiếm chuỗi
+    strpost($str, 'aaa');
+- Độ dài chuỗi
+    strlen($str);
+-In hoa chữ cái đầu mõi từ
+    ucwords($str);
+-In hoa chữ cái đầu tiên
+    ucfirst($str);
+- Trong php ký tự tiếng việt có thể hiểu là nhiều ký tự 
+    vd: "phạm" -->6 ký tự (chứ ko phải 4)
+2) Liên quan đến sô
+- number_format:
+$number =20.008
+number_format($number); //20
+number_format($number,2); //20.01 (làm tròn 2 chữ số thập phân)
+number_format($number,2, ',', '.'); //20,008.00
+
+- Làm tròn
++ round();
+---------------------------------------
+Bài: OOP
+[1] So sánh 2 object của cùng một lớp
+    $userA= new User();
+    $userB = new User();
+
+    if($userA === $userB){
+        echo "yes"; 
+    }   
+    else{
+        echo "No"; //kết quả
+    }
+    => No, 2 đối tượng riêng biệt nên ko bao giờ bằng nhau (kể cả khi chúng cùng lớp).
+    ==> var_dump($userA);
+        var_dump($userB);
+        Ta thấy ngay sự khác nhau giữa chúng (ID khác nhau, mõi object trong class được đánh 1 ID duy nhất lần lượt là 1,2,3,..)
+[2] Hằng trong class
+    Hằng (const) bên trong class có cách tạo khác so với cách tạo hằng thông thường.
+    const PI = 3.14;
+
+    //gọi hằng bên ngoài class
+    echo ClassName::PI; //gọi const thông qua tên lớp
+
+[3] STATIC, SELF
+--------------------------------------
+Bài : MySQL
+[1] Hiển thị tiếng việt
+    utf8_unicode_ci hoặc utf8_general_ci
+[2] field
+- cột id: là mặc định (lưu thứ tự các records).
+- và một field khác làm key
+
+[3] cách tạo một table
+- Default: 
+    none: bắt buộc nhập.
+    null: nhập hoặc không nhâp
+    current_timestamp :chỉ dành cho field dạng thời gian.
+- Attributes:
+    binary: dạng nhị phân
+    ______: dạng số nguyên không âm.
+- Index:
+    primary: khoá chính
+    unique : khoá ngoại
+
+[4] Tạo khoá ngoại
+chọn table chứa khoá ngoại ->chọn tab structor ->tab Hiển thị quan hệ ->điền thông tin
+
+[5] trong quan hệ giữa 2 bảng.
+table cha insert trước, delete sau
+table con insert sau, delete trước
+
+[6] Câu truy vấn đúng cú pháp thì không bao giờ báo lỗi khi chạy
+cho dù không tìm thấy thì sẽ trả về null (đối với cân lệnh DELETE , UPDATE)
+- Tìm hiểu cách thức search từng từ : fullstack search
+
+[7] Các toán tử trong SQL.
+=, <=, >=, !=, <>, like(giống), not like(không giống)
+IN, NOT IN
+IS NULL, IS NOT NULL 
+id BETWEEN 1 AND 4 <=> id >=1 AND id <=4   -->dùng khi các giá trị liên tục
+id IN (1,2,7,9) -->dùng khi các giá trị ngắt quãng
+
+[8] SELECT
+SELECT column1, colum2, ...
+FROM table1, table2, ...
+WHERE ...
+GROUP BY colum1, ...
+HAVING
+ORDER BY colum, ASC|DESC
+LIMIT 
+
+[9] Trong phpMyAdmin chỉ có thể tạo ra mối quan hệ 1-n
+Muốn tạo ra các mối quan hệ 1-1, n-n thì dùng phần mềm MySQL Workbench
+
+-------------------------------------------------------------
+Bài : PDO
+[1] hàm exec() --> trả về số record bị ảnh hưởng, nếu ko có dòng nào bị ảnh hưởng thì trả về false
+    Dùng trong INSERT , UPDATE, DELETE
+[2] Các SELECT
+- Query: truy vấn 1 lần ko nên dùng
+Để in dữ liệu bắt buộc phải dùng vòng lặp (ko dùng được print_r($conn->query()))
++ FETCH ASSOCSS : trả về mảng có index là tên cột ( ko còn bị double)
++ FETCH OBJ : trả về mảng OBJ
++ FETCH BOTH: cả 2 cái trên (mặc định)
++ FETCH NUMBER : trả về mảng có index mặc định 0,1,2,...n-1

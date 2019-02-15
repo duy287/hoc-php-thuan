@@ -1,0 +1,9 @@
+﻿THỨ TỰ XEM TRÊN SERIES NÀY (SẮP XẾP THEO LEVEL)
+1. BASIC
+2. FORM
+3. ADVANCED
+4. OOP Basic
+5. PHP_MYSQL
+6. AJAX
+7. PHP Extensison
+----------------------------------------------------------------------------------
